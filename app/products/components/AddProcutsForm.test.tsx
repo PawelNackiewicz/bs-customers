@@ -31,18 +31,22 @@ describe("AddProductsForm", () => {
         }
         user.type(screen.getByRole('textbox', {
             name: /nazwa usługi/i
-        }), 'mockData.title')
+        }), mockData.title)
         user.type(screen.getByRole('textbox', {
             name: /opis usługi/i
-        }), 'mockData.description')
+        }), mockData.description)
         user.type(screen.getByRole('spinbutton', {
             name: /czas usługi/i
-        }), '1')
+        }), mockData.duration)
         user.type(screen.getByRole('spinbutton', {
             name: /cena/i
-        }), '2')
-        user.click(screen.getByTestId('pawiBtn'))
-        await waitFor(() => expect(screen.queryAllByRole("alert")).toHaveLength(0))
-        expect(mockAddProducts).toBeCalledWith(mockData)
+        }), mockData.price)
+        await user.click(screen.getByRole('button', {
+            name: /Dodaj/i
+        }))
+        waitFor(() => {
+            expect(screen.queryAllByRole("alert")).toHaveLength(0)
+            expect(mockAddProducts).toBeCalledWith(mockData)
+        })
     });
 });
