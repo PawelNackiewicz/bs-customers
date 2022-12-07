@@ -18,8 +18,6 @@ interface AddProductsFormProps {
 export default function AddProductsForm({ addProduct }: AddProductsFormProps) {
     const { register, handleSubmit, formState: { errors }, reset } = useForm<AddProductsFormInputs>();
     const onSubmit = async (data: AddProductsFormInputs) => {
-        console.log('clicked');
-
         await addProduct(data)
         reset();
     };

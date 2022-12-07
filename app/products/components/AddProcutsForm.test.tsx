@@ -29,24 +29,27 @@ describe("AddProductsForm", () => {
             price: faker.datatype.number(200).toString(),
             priority: 'MEDIUM'
         }
-        user.type(screen.getByRole('textbox', {
+        await user.type(screen.getByRole('textbox', {
             name: /nazwa usługi/i
         }), mockData.title)
-        user.type(screen.getByRole('textbox', {
+        await user.type(screen.getByRole('textbox', {
             name: /opis usługi/i
         }), mockData.description)
-        user.type(screen.getByRole('spinbutton', {
+        await user.type(screen.getByRole('spinbutton', {
             name: /czas usługi/i
         }), mockData.duration)
-        user.type(screen.getByRole('spinbutton', {
+        await user.type(screen.getByRole('spinbutton', {
             name: /cena/i
         }), mockData.price)
         await user.click(screen.getByRole('button', {
             name: /Dodaj/i
         }))
-        waitFor(() => {
+        await waitFor(() => {
             expect(screen.queryAllByRole("alert")).toHaveLength(0)
             expect(mockAddProducts).toBeCalledWith(mockData)
+            expect((screen.getByRole('textbox', {
+                name: /nazwa usługi/i
+            }) as HTMLInputElement).value).toBe("")
         })
     });
 });
