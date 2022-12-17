@@ -22,7 +22,7 @@ export default function AddProductsForm({ addProduct }: AddProductsFormProps) {
         reset();
     };
     return (
-        <div className="p-40">
+        <div className="">
             <h2 className="mb-10">Dodaj nową usługę</h2>
             <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col max-w-md gap-2'>
                 <div className="flex flex-col">
