@@ -7,7 +7,7 @@ import { Textarea } from "../../../components/form/inputs/TextArea";
 export interface AddCustomerFormInputs {
     firstName: string
     lastName: string
-    birthday?: Date
+    birthdate?: Date
     gender: 'MALE' | 'FEMALE',
     email?: string,
     phone?: string,
@@ -36,7 +36,7 @@ export default function AddCustomerForm({ addCustomer }: AddCustomerFormProps) {
             <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col max-w-md gap-2'>
                 <Input fieldId="firstName" label="Imie" placeholder="Imie" register={register} required errors={errors.firstName} />
                 <Input fieldId="lastName" label="Nazwisko" placeholder="Nazwisko" register={register} required errors={errors.lastName} />
-                <Input fieldId="birthday" label="Data urodzenia" placeholder="birthday" register={register} errors={errors.birthday} type='date' />
+                <Input fieldId="birthdate" label="Data urodzenia" placeholder="birthday" register={register} errors={errors.birthdate} type='date' />
                 <Select fieldId="gender" defaultValue="FEMALE" register={register} label='płeć' options={[{ id: 'FEMALE', value: 'FEMALE', label: 'kobieta' }, { id: 'MALE', value: 'MALE', label: 'męzczyzna' }]} />
                 <Input fieldId="email" label="email" placeholder="email" register={register} errors={errors.email} type='email' />
                 <Input fieldId="phone" label="telefon" placeholder="telefon" register={register} errors={errors.phone} />
