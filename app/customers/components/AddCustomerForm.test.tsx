@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from '@testing-library/user-event'
-import AddProductsForm, { AddProductsFormInputs } from "./AddProductsForm";
+import AddProductsForm, { AddProductsFormInputs } from "./AddCustomerForm";
 import { faker } from '@faker-js/faker';
 
 const mockAddProducts = jest.fn((data: AddProductsFormInputs) => {
