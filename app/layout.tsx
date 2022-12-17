@@ -13,7 +13,7 @@ export default function RootLayout({
       <body>
         <div className='flex flex-col w-screen h-screen'>
           <Navigation />
-          <div className='flex-grow flex justify-center items-center'>
+          <div className='flex-grow flex justify-center w-full'>
             {children}
           </div>
           <Footer />

@@ -4,7 +4,7 @@ import { mockAddProduct } from "./services/productService";
 
 export default function Page() {
   return (
-    <div className="ml-40">
+    <div className="">
       <AddProductsForm addProduct={mockAddProduct} />
     </div>
   );

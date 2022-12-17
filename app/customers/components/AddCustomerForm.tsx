@@ -48,7 +48,7 @@ export default function AddCustomerForm({ addCustomer }: AddCustomerFormProps) {
 
                 <div className="flex w-full justify-between mt-10">
                     <button type="button" className="rounded-lg py-2 px-4">Anuluj</button>
-                    <button type="submit" data-testid='pawiBtn' className="bg-blue-500 rounded-lg text-white py-2 px-10">Dodaj</button>
+                    <button type="submit" data-testid='pawiBtn' className="bg-sky-500 rounded-lg text-white py-2 px-10">Dodaj</button>
                 </div>
             </form >
         </div>
