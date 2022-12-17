@@ -1,3 +1,5 @@
+import { Footer } from '../components/footer/Footer';
+import { Navigation } from '../components/navigation/Navigation';
 import '../styles/globals.css';
 
 export default function RootLayout({
@@ -8,7 +10,15 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body>{children}</body>
+      <body>
+        <div className='flex flex-col w-screen h-screen'>
+          <Navigation />
+          <div className='flex-grow flex justify-center items-center'>
+            {children}
+          </div>
+          <Footer />
+        </div>
+      </body>
     </html>
   )
 }
