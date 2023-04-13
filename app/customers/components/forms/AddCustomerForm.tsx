@@ -1,8 +1,8 @@
 'use client';
 import { useForm } from "react-hook-form";
-import { Input } from "../../../components/form/inputs/Input";
-import { Select } from "../../../components/form/inputs/Select";
-import { Textarea } from "../../../components/form/inputs/TextArea";
+import { Input } from "../../../../components/form/inputs/Input";
+import { Select } from "../../../../components/form/inputs/Select";
+import { Textarea } from "../../../../components/form/inputs/TextArea";
 
 export interface AddCustomerFormInputs {
     firstName: string
