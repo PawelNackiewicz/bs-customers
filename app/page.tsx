@@ -2,7 +2,7 @@
 export default function Page() {
   return (
     <div>
-      <h1>Hello Dashboard</h1>
+      <h1>Hello Home</h1>
     </div>
   )
 }
