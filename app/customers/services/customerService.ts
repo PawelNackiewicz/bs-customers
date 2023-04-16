@@ -1,5 +1,5 @@
-import { AddCustomerFormInputs } from "../components/AddCustomerForm";
 import { faker } from "@faker-js/faker";
+import { AddCustomerFormInputs } from "../components/forms/AddCustomerForm";
 
 export const mockAddCustomer = (data: AddCustomerFormInputs) => {
   return new Promise<AddCustomerFormInputs>((resolve) => {
