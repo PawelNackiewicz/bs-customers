@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
-import Image from 'next/image';
 import clsx from 'clsx';
 import Icon, { IconName } from '../icons/Icon';
 
@@ -52,7 +51,7 @@ export const Navigation = () => {
                         <Link href={link.href}>
                             <div className='my-2 flex justify-center items-center'>
                                 <Icon name={link.icon} />
-                                <div className={clsx('transition-all ease-in-out duration-700', !collapsed ? 'w-32 ml-2' : 'w-0 opacity-0')}>
+                                <div className={clsx('transition-all ease-in-out duration-700', !collapsed ? 'w-32 ml-2' : 'w-0 opacity-0')} data-testid={`nav_${link.label}`}>
                                     <p className='text-lg'>{link.label}</p>
                                 </div>
                             </div>
@@ -60,7 +59,7 @@ export const Navigation = () => {
                     </li>
                 )}
             </ul>
-            <button className='absolute rounded-full border-2 bottom-10 -right-4 bg-white' onClick={() => setCollapsed(!collapsed)}>
+            <button className='absolute rounded-full border-2 bottom-10 -right-4 bg-white' onClick={() => setCollapsed(!collapsed)} data-testid='nav_arrowRight'>
                 <Icon name='arrowRight' size={30} className={clsx('transition ease-in-out duration-700', !collapsed && 'rotate-180')} />
             </button>
         </nav>
