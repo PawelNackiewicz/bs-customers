@@ -5,10 +5,10 @@ import { Select } from "../../../../components/form/inputs/Select";
 import { Textarea } from "../../../../components/form/inputs/TextArea";
 
 export interface AddCustomerFormInputs {
-    firstName: string
-    lastName: string
+    firstName?: string
+    lastName?: string
     birthdate?: Date
-    gender: 'MALE' | 'FEMALE',
+    gender?: 'MALE' | 'FEMALE',
     email?: string,
     phone?: string,
     source?: 'SOCIAL MEDIA' | 'FRIENDS' | 'FAMILY',
