@@ -63,8 +63,6 @@ export const CustomerList = () => {
         debugTable: true,
     })
 
-    navigator.clipboard.writeText(JSON.stringify(CUSTOMERS));
-
     return (
         <div className="p-2">
             <table className='border-separate border-spacing-y-4'>
