@@ -17,7 +17,7 @@ export const Icons: Story = {
     <div>
       {Object.keys(defaultIcons).map((item) =>
         <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Icon name={item} />
+          <Icon name={item as keyof typeof defaultIcons} />
           <p>{item}</p>
         </div>
       )}
